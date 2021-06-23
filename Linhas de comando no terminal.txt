@@ -1,0 +1,1497 @@
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ mkdir pastaNova
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd pastaNova
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Repositório vazio Git inicializado em  /home/samuel/Área de Trabalho/pastaNova/.git/
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git status
+No ramo master
+
+No commits yet
+
+nada para enviar (crie/copie arquivos e use "git add" para registrar)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git clone https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+Cloning into 'Versionamento-de-codigo'...
+remote: Enumerating objects: 57, done.
+remote: Counting objects: 100% (57/57), done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 57 (delta 17), reused 55 (delta 16), pack-reused 0
+Receiving objects: 100% (57/57), 99.48 KiB | 327.00 KiB/s, done.
+Resolving deltas: 100% (17/17), done.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git remote -v
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git remote
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ ls
+Versionamento-de-codigo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd Versionamento-de-codigo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Everything up-to-date
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	postos_trabalho.xlsx
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "arquivo novo add"
+[master b497e7a] arquivo novo add
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 postos_trabalho.xlsx
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/samuelbohnmuller/Versionamento-de-codigo.git/'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 10.70 KiB | 3.57 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+   099f9a2..b497e7a  master -> master
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ ls
+ 0,,15462317-FMM,00.jpg   09.html  'Erro 1.png'   file.html   postos_trabalho.xlsx
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+  master
+* titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "salvei modificação no arquivo html"
+[titulo 541b69c] salvei modificação no arquivo html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log
+commit 541b69c7617c4b3e4384a6e493ee2a642de7b217 (HEAD -> titulo)
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 10:30:23 2021 -0300
+
+    salvei modificação no arquivo html
+
+commit b497e7a945488526ab09be371dd55b032792acb4 (origin/master, origin/HEAD, master)
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 10:24:22 2021 -0300
+
+    arquivo novo add
+
+commit 099f9a25bb22b5d01aafcea9f0e60165a5f09335
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 09:06:58 2021 -0300
+
+    coisas do rep rem
+
+commit d0f66cac4303d471322ce29cdc64562fe64da374
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 08:16:18 2021 -0300
+
+    salvo gitignore
+
+commit 153890ceb339da9372f09d673edde47ae9113102
+Author: samuel muller <samuel-bohn@hotmail.com>
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd novaPasta
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git branch lista
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout titulo
+error: pathspec 'titulo' did not match any file(s) known to git
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+Switched to branch 'lista'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "mudei lista"
+[lista 2eb6ba8] mudei lista
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd pastaNova
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd Versionamento-de-codigo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "mudei o titulo"
+[master f33abc4] mudei o titulo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout
+Seu ramo está à frente de 'origin/master' por 1 submissão.
+  (use "git push" to publish your local commits)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Seu ramo está à frente de 'origin/master' por 1 submissão.
+  (use "git push" to publish your local commits)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git merge titulo
+Mesclagem automática de 09.html
+CONFLITO (conteúdo): conflito de mesclagem em 09.html
+Automatic merge failed; fix conflicts and then commit the result.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 1 submissão.
+  (use "git push" to publish your local commits)
+
+Você tem caminhos não mesclados.
+  (fixar conflitos e executar "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Caminhos não mesclados:
+  (usar "git add <arquivo>..." para marcar resolução)
+	ambos modificados:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "tirei o bug"[master 7775c3d] tirei o bug
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git merge titulo
+Already up to date.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log --oneline
+7775c3d (HEAD -> master) tirei o bug
+f33abc4 mudei o titulo
+541b69c (titulo) salvei modificação no arquivo html
+b497e7a (origin/master, origin/HEAD) arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 3 submissões.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "salvo"
+[titulo 83c9e75] salvo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Seu ramo está à frente de 'origin/master' por 3 submissões.
+  (use "git push" to publish your local commits)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git merge titulo
+Merge made by the 'recursive' strategy.
+ 09.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log --graph
+*   commit 273063a6c631a706083f1315642fd994b64b0e4a (HEAD -> master)
+|\  Merge: 7775c3d 83c9e75
+| | Author: samuel muller <samuel-bohn@hotmail.com>
+| | Date:   Wed Jun 23 11:20:28 2021 -0300
+| | 
+| |     Merge branch 'titulo'
+| | 
+| * commit 83c9e758a0476c3f7da8fa23da465c7e1ef9cbc0 (titulo)
+| | Author: samuel muller <samuel-bohn@hotmail.com>
+| | Date:   Wed Jun 23 11:20:14 2021 -0300
+| | 
+| |     salvo
+| | 
+* | commit 7775c3db13cddf07d607b8fd923ec61b82746fc6
+|\| Merge: f33abc4 541b69c
+| | Author: samuel muller <samuel-bohn@hotmail.com>
+| | Date:   Wed Jun 23 11:09:03 2021 -0300
+| | 
+| |     tirei o bug
+| | 
+| * commit 541b69c7617c4b3e4384a6e493ee2a642de7b217
+| | Author: samuel muller <samuel-bohn@hotmail.com>
+| | Date:   Wed Jun 23 10:30:23 2021 -0300
+| | 
+| |     salvei modificação no arquivo html
+| | 
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ got log --oneline
+O comando 'got' não foi encontrado, mas existem 17 semelhantes.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log --oneline
+273063a (HEAD -> master) Merge branch 'titulo'
+83c9e75 (titulo) salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+541b69c salvei modificação no arquivo html
+b497e7a (origin/master, origin/HEAD) arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m"salvo"
+[titulo 580cb89] salvo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Seu ramo está à frente de 'origin/master' por 5 submissões.
+  (use "git push" to publish your local commits)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git merge titulo
+Merge made by the 'recursive' strategy.
+ 09.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log
+commit 736fc03da393051e05bd5f800d1ed9f87ee481a5 (HEAD -> master)
+Merge: 273063a 580cb89
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 11:35:39 2021 -0300
+
+    Merge branch 'titulo'
+
+commit 580cb8947fb5efb6185a8f653cc8910208f9bb5e (titulo)
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 11:35:08 2021 -0300
+
+    salvo
+
+commit 273063a6c631a706083f1315642fd994b64b0e4a
+Merge: 7775c3d 83c9e75
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 11:20:28 2021 -0300
+
+    Merge branch 'titulo'
+
+commit 83c9e758a0476c3f7da8fa23da465c7e1ef9cbc0
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 11:20:14 2021 -0300
+
+    salvo
+
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 7 submissões.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 1.41 KiB | 360.00 KiB/s, done.
+Total 15 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 2 local objects.
+To https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+   b497e7a..736fc03  master -> master
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd novaPasta
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git branch
+* lista
+  master
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 18 (delta 13), reused 17 (delta 12), pack-reused 0
+Unpacking objects: 100% (18/18), 11.99 KiB | 92.00 KiB/s, done.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+   099f9a2..736fc03  master     -> origin/master
+Updating 099f9a2..736fc03
+Fast-forward
+ 09.html              |   4 ++--
+ postos_trabalho.xlsx | Bin 0 -> 13519 bytes
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ create mode 100644 postos_trabalho.xlsx
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+Switched to branch 'lista'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+Switched to branch 'lista'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+Mesclagem automática de 09.html
+CONFLITO (conteúdo): conflito de mesclagem em 09.html
+Automatic merge failed; fix conflicts and then commit the result.
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+Você tem caminhos não mesclados.
+  (fixar conflitos e executar "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Mudanças a serem submetidas:
+	new file:   postos_trabalho.xlsx
+
+Caminhos não mesclados:
+  (usar "git add <arquivo>..." para marcar resolução)
+	ambos modificados:   09.html
+
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "salvo"
+[lista b1fbb88] salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git branch
+* lista
+  master
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+Switched to branch 'lista'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "salvo"
+[lista 5725aed] salvo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git merge lista
+Updating 736fc03..5725aed
+Fast-forward
+ 09.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 764 bytes | 382.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+   736fc03..5725aed  master -> master
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd pastaNova
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd Versionamento-de-codigo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 7 (delta 4), reused 7 (delta 4), pack-reused 0
+Unpacking objects: 100% (7/7), 744 bytes | 148.00 KiB/s, done.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+   736fc03..5725aed  master     -> origin/master
+Updating 736fc03..5725aed
+Fast-forward
+ 09.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout --09.html
+error: unknown option `09.html'
+uso: git checkout [<options>] <branch>
+   ou: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <arquivo>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout --09.html
+error: unknown option `09.html'
+uso: git checkout [<options>] <branch>
+   ou: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <arquivo>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout lista
+error: pathspec 'lista' did not match any file(s) known to git
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git branch
+* master
+  titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git reset
+Unstaged changes after reset:
+M	09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git reset 09.html
+Unstaged changes after reset:
+M	09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout lista
+error: pathspec 'lista' did not match any file(s) known to git
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout titulo
+Switched to branch 'titulo'
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout --09.html
+error: unknown option `09.html'
+uso: git checkout [<options>] <branch>
+   ou: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <arquivo>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git restore 09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git reset HEAD 09.html 
+Unstaged changes after reset:
+M	09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git restore 09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git reset HEAD 09.html
+Unstaged changes after reset:
+M	09.html
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout 09.html
+Updated 1 path from the index
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "salvo"
+[titulo 22fb27b] salvo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log --oneline
+22fb27b (HEAD -> titulo) salvo
+580cb89 salvo
+83c9e75 salvo
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git revert 22fb27b
+[titulo e5cfaee] Revert "salvo"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git log --oneline
+e5cfaee (HEAD -> titulo) Revert "salvo"
+22fb27b salvo
+580cb89 salvo
+83c9e75 salvo
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: e5cfaee Revert "salvo"
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: e5cfaee Revert "salvo"
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash pop
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+Dropped refs/stash@{0} (10f4e2cfc428485e6e524824a05eb4f1ec426d8a)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "stash"
+[titulo e7dbf91] stash
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash pop
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+Dropped refs/stash@{0} (8a4c0c12b566e6ae6e62087f2a87188547d7842f)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash apply {0}
+error: {0} is not a valid reference
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash apply 0
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "stash feito"[titulo d78fc40] stash feito
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: d78fc40 stash feito
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: d78fc40 stash feito
+stash@{1}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash apply 0
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash pop
+error: Your local changes to the following files would be overwritten by merge:
+	09.html
+Please commit your changes or stash them before you merge.
+Aborting
+The stash entry is kept in case you need it again.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: d78fc40 stash feito
+stash@{1}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash drop
+Dropped refs/stash@{0} (87b572b4dd515502c49c875a0a1f18df33727e57)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   09.html
+
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "comitado"
+[titulo 9a6f0b2] comitado
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: 9a6f0b2 comitado
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: 9a6f0b2 comitado
+stash@{1}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash drop
+Dropped refs/stash@{0} (66768f31fe90071ab8d44471024414ac71618ed3)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash apply 0
+Mesclagem automática de 09.html
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash drop
+Dropped refs/stash@{0} (4bcdab4c0883c49b1075e1fb3da3a4d0ab2dc85a)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash
+Saved working directory and index state WIP on titulo: 9a6f0b2 comitado
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+stash@{0}: WIP on titulo: 9a6f0b2 comitado
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash apply 0
+No ramo titulo
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "stash salvo"[titulo 3cc95b0] stash salvo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo titulo
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash drop
+Dropped refs/stash@{0} (554292b7d70e939ab31bca3537f2825a323033ec)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git stash list
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git merge titulo
+Mesclagem automática de 09.html
+Merge made by the 'recursive' strategy.
+ 09.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 7 submissões.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 1.74 KiB | 356.00 KiB/s, done.
+Total 19 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 2 local objects.
+To https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+   5725aed..20f289d  master -> master
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd novaPasta
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 19 (delta 12), reused 19 (delta 12), pack-reused 0
+Unpacking objects: 100% (19/19), 1.72 KiB | 117.00 KiB/s, done.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+   5725aed..20f289d  master     -> origin/master
+Updating 5725aed..20f289d
+Fast-forward
+ 09.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+20f289d (HEAD -> master, origin/master) Merge branch 'titulo'
+3cc95b0 stash salvo
+9a6f0b2 comitado
+d78fc40 stash feito
+e7dbf91 stash
+e5cfaee Revert "salvo"
+22fb27b salvo
+5725aed (lista) salvo
+b1fbb88 salvo
+736fc03 Merge branch 'titulo'
+580cb89 salvo
+273063a Merge branch 'titulo'
+83c9e75 salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+2eb6ba8 mudei lista
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout 3cc95b0
+Note: switching to '3cc95b0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3cc95b0 stash salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at 3cc95b0
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Previous HEAD position was 3cc95b0 stash salvo
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+20f289d (HEAD -> master, origin/master) Merge branch 'titulo'
+3cc95b0 stash salvo
+9a6f0b2 comitado
+d78fc40 stash feito
+e7dbf91 stash
+e5cfaee Revert "salvo"
+22fb27b salvo
+5725aed (lista) salvo
+b1fbb88 salvo
+736fc03 Merge branch 'titulo'
+580cb89 salvo
+273063a Merge branch 'titulo'
+83c9e75 salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+2eb6ba8 mudei lista
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout e7dbf91
+Note: switching to 'e7dbf91'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at e7dbf91
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Previous HEAD position was e7dbf91 stash
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "s"
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+20f289d (HEAD -> master, origin/master) Merge branch 'titulo'
+3cc95b0 stash salvo
+9a6f0b2 comitado
+d78fc40 stash feito
+e7dbf91 stash
+e5cfaee Revert "salvo"
+22fb27b salvo
+5725aed (lista) salvo
+b1fbb88 salvo
+736fc03 Merge branch 'titulo'
+580cb89 salvo
+273063a Merge branch 'titulo'
+83c9e75 salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+2eb6ba8 mudei lista
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout d78fc40
+Note: switching to 'd78fc40'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d78fc40 stash feito
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Previous HEAD position was d78fc40 stash feito
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout mudei lista
+error: pathspec 'mudei' did not match any file(s) known to git
+error: pathspec 'lista' did not match any file(s) known to git
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout e7dbf91
+Note: switching to 'e7dbf91'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at e7dbf91
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git master
+git: 'master' não é um comando git. Veja 'git --help'.
+
+The most similar command is
+	restore
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Previous HEAD position was e7dbf91 stash
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "s"
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout e7dbf91
+Note: switching to 'e7dbf91'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at e7dbf91 stash
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+Previous HEAD position was e7dbf91 stash
+Switched to branch 'lista'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo lista
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+5725aed (HEAD -> lista) salvo
+b1fbb88 salvo
+736fc03 Merge branch 'titulo'
+580cb89 salvo
+273063a Merge branch 'titulo'
+83c9e75 salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+2eb6ba8 mudei lista
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout f33abc4
+Note: switching to 'f33abc4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f33abc4 mudei o titulo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at f33abc4
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at f33abc4
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at f33abc4
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout titulo
+error: pathspec 'titulo' did not match any file(s) known to git
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git branch
+* (HEAD detached at f33abc4)
+  lista
+  master
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout lista
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+f33abc4 (HEAD) mudei o titulo
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout 099f9a2
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+HEAD detached at f33abc4
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	09.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git commit -m "s"
+[detached HEAD baa84f2] s
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  baa84f2 s
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> baa84f2
+
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout 099f9a2
+Note: switching to '099f9a2'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 099f9a2 coisas do rep rem
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git checkout master
+Previous HEAD position was 099f9a2 coisas do rep rem
+Switched to branch 'master'
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log-p
+git: 'log-p' não é um comando git. Veja 'git --help'.
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log -p
+commit 20f289d64b0a7f3bffef8ecd0d271b73ae84e3f6 (HEAD -> master, origin/master)
+Merge: 5725aed 3cc95b0
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 15:19:22 2021 -0300
+
+    Merge branch 'titulo'
+
+commit 3cc95b0cad5b0602745926d670ef9529abc7a660
+Author: samuel muller <samuel-bohn@hotmail.com>
+Date:   Wed Jun 23 15:16:36 2021 -0300
+
+    stash salvo
+
+diff --git a/09.html b/09.html
+index 93ee488..e9d67da 100644
+--- a/09.html
++++ b/09.html
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>muuuuudo de novooooooooo </title>
++    <title>lets goo </title>
+ </head>
+ <body>
+     <h3>mudei o texto</h3>
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git log --oneline
+20f289d (HEAD -> master, origin/master) Merge branch 'titulo'
+3cc95b0 stash salvo
+9a6f0b2 comitado
+d78fc40 stash feito
+e7dbf91 stash
+e5cfaee Revert "salvo"
+22fb27b salvo
+5725aed (lista) salvo
+b1fbb88 salvo
+736fc03 Merge branch 'titulo'
+580cb89 salvo
+273063a Merge branch 'titulo'
+83c9e75 salvo
+7775c3d tirei o bug
+f33abc4 mudei o titulo
+2eb6ba8 mudei lista
+541b69c salvei modificação no arquivo html
+b497e7a arquivo novo add
+099f9a2 coisas do rep rem
+d0f66ca salvo gitignore
+153890c arquivo html salvo
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git diff 3cc95b0..e5cfaee
+diff --git a/09.html b/09.html
+index e9d67da..4b83b83 100644
+--- a/09.html
++++ b/09.html
+@@ -4,12 +4,12 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>lets goo </title>
++    <title>vamos ver se muda </title>
+ </head>
+ <body>
+     <h3>mudei o texto</h3>
+     <p>texto mais pequeno</p>
+     <h2>Titulo de nivelfdgfgfdgfgfdggfgd medio N2</h2>
+-    <h3>texto mudado</h3>
++    <h3>texto escrito dentro desse N2 acima</h3>
+ </body>
+ </html>
+\ No newline at end of file
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git diff
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git status
+No ramo master
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ git push origin master
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Everything up-to-date
+samuel@samuel-TA880GB:~/Área de Trabalho/novaPasta$ cd ..
+samuel@samuel-TA880GB:~/Área de Trabalho$ cd pastaNova
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd Versionamento de Codigo
+bash: cd: número excessivo de argumentos
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova$ cd Versionamento-de-codigo
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git pull origin master
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+From https://github.com/samuelbohnmuller/Versionamento-de-codigo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   09.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git add .
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git commit -m "s"
+[master 6e5aa60] s
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 1 submissão.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git tag -a versao0.1 -m "versão pronta"]
+fatal: tag 'versao0.1' already exists
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git tag -a versao0;2 -m "versão pronta"
+fatal: no tag message?
+2: comando não encontrado
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git tag
+versao0.1
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git tag -a versao0.2 -m "versao pronta"
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git tag
+versao0.1
+versao0.2
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ git push origin versao0.2
+Username for 'https://github.com': samuelbohnmuller
+Password for 'https://samuelbohnmuller@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 420 bytes | 420.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/samuelbohnmuller/Versionamento-de-codigo.git
+ * [new tag]         versao0.2 -> versao0.2
+samuel@samuel-TA880GB:~/Área de Trabalho/pastaNova/Versionamento-de-codigo$ 
+
+

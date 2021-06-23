@@ -1,0 +1,151 @@
+cd documents/GIT == COMANDO PARA SELECIONAR REPOSITÓRIO
+cd .. == SOBE UMA PASTA NO DIRETORIO( DE GIT PARA documents)
+cd servidor/ == PARA ENTRAR NESSA PASTA
+cd ../GIT/ == VOLTAR PARA ESSA PASTA
+
+git init == INICIAR O REPOSITÓRIO
+git init --bare == CONTERÁ SÓ OS ARQUIVOS QUE FORAM EDITADOS. SEM OS ORIGINAIS
+
+git status == MOSTRA INFORMAÇÕES
+
+git config --local user.name "samuel" == SEU NOME PARA O REPOSITÓRIO
+git config --local user.email "samuel-bohn@hotmail.com" == //
+git config user.email == PARA SABER O EMAIL DO USUÁRIO
+
+git commit -m "mensagem" == ACRESCENTARÁ UMA MENSAGEM AO ARQUIVO 07.HTML
+git add 07.html == ARQUIVO 07.HTML FOI ADICIONADO PARA MUDANÇAS
+
+git log == MOSTRARÁ ALGUMAS INFORMAÇÕES COMO USUÁRIO, DATA...
+git log --oneline == MOSTRA AS INFORMAÇÕES RESUMIDAS
+git log -p == MOSTRA AS ALTERAÇÕES QUE FORAM REALIZADAS NAQUELE ARQUIVO
+git log --pretty="format:%h $s" == INFORMAÇÕES COM FORMATAÇÃO
+
+git remote == LISTARÁ TODOS OS REPOSITORIOS REMOTOS QUE O REPOSITORIO LOCAL CONHECE
+git remote add nomedoservidorremoto C:/Users/Samuel/Documents/servidor/ == CRIA UM SERVIDOR REMOTO COM UM CAMINHO(QUE PODE SER URL, PASTA DO SERVIDOR)
+git remote -v == MOSTRARÁ O ENDEREÇO DO SERVIDOR REMOTO
+git remote rename origin servidorremoto == RENOMEIA O SERVIDOR ORIGIN PARA O NOME QUE É O NOSSO SERVIDOR REMOTO(SERVIDORREMOTO)
+git remote add origin https://github.com/samuelmuller/GIT.git == NOVO REPOSITORIO NA MINHA CONTA DO GITHUB E EM HTTPS USO O COMANDO NESSA LINHA
+git push origin master == MANDO ARQUIVOS E ALTERAÇÕES PARA O ENDEREÇO DO SERVIDOR REMOTO(GITHUB). EM SEGUIDA O GITHUB ME PEDE LOGIN E SENHA
+
+
+== hash É A IDENTIFICAÇÃO, QUE É ÚNICA PARA CADA INFORMAÇÃO
+== head É O LOCAL ONDE ESTAMOS
+== master É UM RAMO
+== new branch É QUE CRIOU UM NOVO RAMO NA PASTA, NO CASO, O RAMO MASTER
+== TOTO ESSES COMANDOS TRAZEM UMA SINCRONIA NO PROJETO, O QUE ESTIVER EM UM ARQUIVO, ESTARÁ NO OUTRO
+
+mkdir  nomedapastaquequerocriar == CRIA UMA PASTA
+
+git clone C:/Users/Samuel/Documents/servidor/ projeto == TRAZ OS DADOS QUE ESTÃO NESSE REPOSITORIO PARA A PASTA ANA, QUE É O COMPUTADOR DELA ACESSANDO OS DADOS DO SERVIDOR REMOTO(CRIANDO UMA PASTA CHAMADA projeto)
+
+.gitignore == NOME DO ARQUIVO NO VSCODE. DENTRO DELE COLOCAMOS O NOME DO ARQUIVO QUE QUEREMOS IGNORAR(PARA IGNORAR UMA PASTA == pasta/)
+
+git push servidorremoto master == MANDO OS ARQUIVOS QUE ESTÃO NA PASTA DA LINHA DE COMANDO ATUAL(MASTER) PARA A PASTA DO SERVIDOR REMOTO(SERVIDORREMOTO)
+git pull servidorremoto master == PEGA OS DADOS DE UM REPOSITORIO REMOTO PARA O REPOSITORIO MASTER(ANA) NO RAMO MASTER
+
+
+cd documents/samuel = entrar na pasta
+git init = iniciar o repositorio
+git status = mostra informações dos arquivos dentro
+git add arquivoExemplo = adiciona esse arquivo para ser usado/monitorado
+git commit -m "gravado" = salva essa adição ou mudança
+git config --local user.name "samuel muller"
+git log = mostrará autor, data, commits feitos e alterações
+git add .gitignore = para ignorar um arquivo de ser monitorado(dentro dele precisa conter o arquivo ignorado. usar visual studio)
+mkdir novaPasta = cria uma nova pasta
+cd .. = volta uma pasta
+git init --bare = repositorio "puro", que só contém os arquivos com alteração. arquivos dentro dle não podem ser alterados
+git remote = listará todos os repositorios rcd emotos que esse repositorio conhece
+git remote add nomeservidorremotoexemplo C:/exemplo/pastaexemplo/ = adiciono repositorio remoto(pode ser link, pasta) 
+git remote -v = mostrará o endereço do repositorio remoto
+git clone C:/exemplo/pastaexemplo/ projeto = pasta no master tem acesso a esse repeositorio remoto
+git push nomeservidorremotoexemplo master = passo(empurro) os arquivos que estão na pasta master para esse servidor remoto
+git pull origin master = pego os arquivos do servidor remoto e passo para a pasta do master(o repositorio remoto está com nome origin, mas é o msm que nomeservidorremotoexemplo)
+ == se der erro no push = git push -f origin master| ou |git push origin master --force
+ls = mostra os arquivos que estão nesse repositorio
+git add arquivoexemplo.pdf = adiciono o arquivo que foi pego do servidor remoto para ser monitorado
+git commit -m "salvo" = salvo a alteração feita
+git config --local user.name "ana" = todo repositorio precisa colocar seu nome e email. se for --global vai ter esse nome e email em todos os repositorios
+git remote rename origin nomeservidorremotoexemplo = renomeia o nome do servidor da pasta que tem por padrão origin, pelo nome do repositorio remoto que quero usar
+git push nomeservidorremotoexemplo master = empurro os arquivos do master para o servidor remoto
+git pull nomeservidorremotoexemplo master ==
+git branch = mostra o ramo que estou trabalhando
+git branch titulo = crio um novo ramo chamado titulo, que está dentro do ramo master(branch é um ramo)
+git checkout titulo = entro no ramo(branch) titulo
+git status = vejo que mostra que o arquivo foi modificado
+git add 05.html = adiciono as modificações
+git commit -m "salvo" ==
+git log = vejo que foram feitas alterações no ramo titulo pelo usuário e data
+== foram feitas modificações nos arquivos da pasta samuel(maquina do usuário exemplo). essas alterações foram feitas no ramo titulo.
+git checkout master = entro de novo em outro ramo para fazer alterações em outra parte do cod
+git checkout -b lista = cria um branch(ramo) e ao mesmo tempo entra nele
+git merge titulo = (estando no ramo master) trago as alterações feitas no ramo(branch) titulo, e atualizo no ramo master, que é onde contém os arquivos perfeitos e sem erros.
+:x (+ENTER) para sair da tela depois do merge
+git rebase titulo = trago as alterações feitas no ramo titulo para o ramo master
+== o rebase deixa a alteração na master por último, commits de outros branch entram primeiro.
+git push servidorremoto master = agora o que está no master, com arquivos atualizados eu empurro para o servidor remoto.
+cd .. = voltando uma página
+cd ana ==
+cd projeto ==
+git checkout master = para ir para o master
+git pull servidorremoto master = pego os arquivos que estão no servidor remoto para o computador ana
+git checkout lista ==
+git add 05.html = como fiz alterações no cod, preciso adicionar a alteração
+git commit -m "salvo" = salvando a alteração
+git log -p = mostra as alterações no cod feitas no arquivo
+git checkout master = quero estar no ramo master da pasta(computador/usuario) ana
+git merge titulo = dará um erro de cod iguais
+== corrijo os cod que estão diferentes, e escolho qual eu quero, dentro do visual ou editor
+git add 05.html
+git commit -m "agora certo"
+git log --graph = mostra o gráfico de repositorios
+git push servidorremoto master = agora envio esses arquivos para o servidor remoto
+git add . = o . eu adiciono tudo, todos os arquivos
+git commit -m "salvado"
+git pull servidorremoto master = primeiro pego os arquivos atualizados, arquivos mais novos, para depois dar um push
+git restore 05.html = desfaz a mudança nesse projeto(desfaz do último commit para frente)
+== HEAD significa onde tu está trabalhando
+git add 05.html = se já fiz o add, pra resetar esse add uso o comando git reset HEAD 05.html
+git checkout 05.html = apago as alterações feitas mesmo se já tenha feito um add
+git commit -m "feito" = se fiz um commit(salvei) e ví que deu bug ou não ficou legal uso o comando abaixo
+git log = pego o número do commit que quero reverter e executo o comando abaixo
+git revert 9d18ecc4f686fb942c8aa304b3094336c6b6356a = reverterá esse commit
+git stash = salva uma alteração que não gerará commits, que é um cod que quero trabalhar depois. ele salva em um local diferente, para depois voltarmos naquele cod
+git stash list = listará os arquivos que estão salvos temporariamente
+git stash apply 0 = pegará o commit nessa posição da lista de stash
+git add 05.html = fiz alterações no cod, por isso agora adiciono ele
+git commit -m "salvo"
+git stash pop = pego a alteração feita não salva que está no stash, e exclui da lista do stash(fazendo merge(sincronizando) com as modificações atuais)
+git add 05.html = fiz o resto de alterações e adiciono
+git commit -m "salvando"
+git push servidorremoto master = agora envio essas alterações para o servidor remoto
+git log --oneline = mostrará commits feitos em linha
+git checkout 631d2b4 = navego até o cod nesse commit, vou ver o cod como ele estáva nessa etapa
+git commit -m "salvando" = comito só se quiser fazer alterações nessa parte do cod. ficando desanexado das linhas de desenvolvimento.
+git checkout -b novobranch = para salvar as alterações feitas nessa parte do cod, crio um novo branch.
+git checkout master = volto para o ramo master
+git diff e61a976..8rg486r = mostra a diferença nas alterações nesses dois commits
+git diff = mostra(se fiz alteração) a alteração feita que ainda não foi comitada
+tag é um ponto que não muda mais. é uma versão pronta.
+git tag -a versao0.1 -m "versão beta" = crio uma versão do projeto.
+git tag = mostra as tags
+git push servidorremoto versao0.1 = envio para o servidor remoto minha tag(versão)
+git pull origin master = primeiro pego os arquivos atualizados do servidor remoto ..
+git push origin master = para depois empurrar essas alterações para o servidor remoto
+git push origin versao0.1 = envio minha tag(versão) para o servidor remoto que aqui é o github
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
